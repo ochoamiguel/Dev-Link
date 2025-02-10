@@ -44,7 +44,7 @@ body * {
 
 #container {
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   max-width: 588px;
   margin: 56px auto 0px;
   padding: 0 24px;
@@ -163,6 +163,7 @@ ul li a:hover {
 
 footer {
   padding-top: 24px;
+  margin: 0;
   text-align: center;
   font-size: 14px;
   box-sizing: border-box;
