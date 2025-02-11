@@ -1,5 +1,7 @@
 function toggleMode() {
-  const html = document.documentElement
+  let html = document.documentElement
+
+  let themeMeta = document.querySelector("meta[name='theme-color']")
 
   /* if (html.classList.contains("light")) {
     html.classList.remove("light")
@@ -15,4 +17,9 @@ function toggleMode() {
   // substituir a imagem
   // se tiver light mode, adicionar a imagem light
   //se tiver sem light mode, manter a imagem normal
+  if (html.classList.contains("light")) {
+    themeMeta.setAttribute("content", "#ffffff")
+  } else {
+    themeMeta.setAttribute("content", "#808080")
+  }
 }
