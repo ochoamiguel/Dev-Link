@@ -1,7 +1,7 @@
 function toggleMode() {
-  let html = document.documentElement
+  const html = document.documentElement
 
-  let themeMeta = document.querySelector("meta[name='theme-color']")
+
 
   /* if (html.classList.contains("light")) {
     html.classList.remove("light")
@@ -17,9 +17,18 @@ function toggleMode() {
   // substituir a imagem
   // se tiver light mode, adicionar a imagem light
   //se tiver sem light mode, manter a imagem normal
-  if (html.classList.contains("light")) {
-    themeMeta.setAttribute("content", "#ffffff")
-  } else {
-    themeMeta.setAttribute("content", "#808080")
-  }
+ 
 }
+document.addEventListener("DOMContentLoaded", function () {
+  let themeMeta = document.querySelector("meta[name='theme-color']")
+  if (themeMeta) {
+    // Tenta ajustar a cor para um valor escuro (ou claro) dependendo do tema
+    themeMeta.setAttribute("content", "#000000") // Altere para a cor desejada
+  } else {
+    let newMeta = document.createElement("meta")
+    newMeta.setAttribute("name", "theme-color")
+    newMeta.setAttribute("content", "#000000") // Altere para a cor desejada
+    document.head.appendChild(newMeta)
+  }
+})
+
