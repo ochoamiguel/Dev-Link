@@ -35,6 +35,7 @@ background-image: url(./assets/bg-mobile.jpg);
   background: var(--bg-url) no-repeat top center/cover;
   height: 100dvh;
   margin: 0;
+  overflow-x: hidden;
 }
 
 body * {
@@ -43,7 +44,7 @@ body * {
 }
 
 #container {
-  width: 100%;
+  width: 100dvh;
   height: 100dvh;
   max-width: 588px;
   margin: 56px auto 0px;
