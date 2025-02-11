@@ -19,16 +19,5 @@ function toggleMode() {
   //se tiver sem light mode, manter a imagem normal
  
 }
-document.addEventListener("DOMContentLoaded", function () {
-  let themeMeta = document.querySelector("meta[name='theme-color']")
-  if (themeMeta) {
-    // Tenta ajustar a cor para um valor escuro (ou claro) dependendo do tema
-    themeMeta.setAttribute("content", "#000000") // Altere para a cor desejada
-  } else {
-    let newMeta = document.createElement("meta")
-    newMeta.setAttribute("name", "theme-color")
-    newMeta.setAttribute("content", "#000000") // Altere para a cor desejada
-    document.head.appendChild(newMeta)
-  }
-})
+
 
